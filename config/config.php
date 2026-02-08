@@ -2,6 +2,7 @@
 return [
     'app_name' => 'Hospital Management System',
     'base_url' => 'http://localhost',
+    'base_path' => '',
     'session_name' => 'hms_session',
     'timezone' => 'Asia/Dhaka',
     'roles' => [

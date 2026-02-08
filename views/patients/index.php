@@ -2,7 +2,7 @@
     <div class="page-header">
         <h1>Patients</h1>
         <?php if (Auth::hasPermission('patients.create')): ?>
-            <a class="btn primary" href="/patients/create">New Patient</a>
+            <a class="btn primary" href="<?= htmlspecialchars($basePath, ENT_QUOTES) ?>/patients/create">New Patient</a>
         <?php endif; ?>
     </div>
     <table class="table">

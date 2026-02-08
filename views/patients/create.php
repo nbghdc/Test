@@ -1,6 +1,6 @@
 <section>
     <h1>Register Patient</h1>
-    <form method="post" action="/patients">
+    <form method="post" action="<?= htmlspecialchars($basePath, ENT_QUOTES) ?>/patients">
         <div class="grid">
             <label>Name
                 <input type="text" name="name" required>

@@ -3,7 +3,7 @@
     <?php if (!empty($error)): ?>
         <p class="alert alert-error"><?= htmlspecialchars($error, ENT_QUOTES) ?></p>
     <?php endif; ?>
-    <form method="post" action="/login">
+    <form method="post" action="<?= htmlspecialchars($basePath, ENT_QUOTES) ?>/login">
         <label>Email
             <input type="email" name="email" required>
         </label>

@@ -1,4 +1,5 @@
 const billingTable = document.querySelector('#billing-items');
+const basePath = document.body?.dataset?.basePath || '';
 
 const updateTotals = () => {
     if (!billingTable) {
@@ -21,7 +22,7 @@ const updateTotals = () => {
         };
     });
 
-    fetch('/billing/calc', {
+    fetch(`${basePath}/billing/calc`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(items),

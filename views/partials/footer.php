@@ -1,4 +1,4 @@
 </main>
-<script src="/assets/js/app.js"></script>
+<script src="<?= htmlspecialchars($basePath, ENT_QUOTES) ?>/assets/js/app.js"></script>
 </body>
 </html>

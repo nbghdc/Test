@@ -44,7 +44,8 @@ class PatientsController extends Controller
 
         $patientModel = new Patient();
         $patientModel->create($data);
-        header('Location: /patients');
+        $basePath = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
+        header('Location: ' . ($basePath ?: '') . '/patients');
         exit;
     }
 }

@@ -27,14 +27,16 @@ class AuthController extends Controller
             'permissions' => $userModel->getUserPermissions((int) $user['id']),
         ];
 
-        header('Location: /');
+        $basePath = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
+        header('Location: ' . ($basePath ?: '/') . '/');
         exit;
     }
 
     public function logout(): void
     {
         session_destroy();
-        header('Location: /login');
+        $basePath = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
+        header('Location: ' . ($basePath ?: '') . '/login');
         exit;
     }
 }

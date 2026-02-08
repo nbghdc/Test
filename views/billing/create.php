@@ -3,7 +3,7 @@
     <?php if (!empty($_GET['success'])): ?>
         <p class="alert alert-success">Invoice saved successfully.</p>
     <?php endif; ?>
-    <form method="post" action="/billing">
+    <form method="post" action="<?= htmlspecialchars($basePath, ENT_QUOTES) ?>/billing">
         <div class="grid">
             <label>Invoice ID
                 <input type="text" name="invoice_id" value="<?= htmlspecialchars($invoiceId, ENT_QUOTES) ?>" readonly>

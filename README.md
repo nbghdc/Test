@@ -14,7 +14,7 @@ A role-based hospital management system built with Core PHP, MySQL, HTML, CSS, a
    - Open phpMyAdmin → Import → `database/hms.sql`.
 3. **Configure database credentials** in `config/database.php`.
 4. Ensure Apache has **mod_rewrite enabled** and `AllowOverride All` for `.htaccess`.
-5. Open the app in the browser: `http://localhost/hms`.
+5. Open the app in the browser: `http://localhost/hms` (or your chosen folder name).
 
 ## Sample Users
 All sample users use the password: **Password@123**

@@ -40,7 +40,8 @@ class BillingController extends Controller
         ];
 
         $billModel->create($data, $items);
-        header('Location: /billing/create?success=1');
+        $basePath = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
+        header('Location: ' . ($basePath ?: '') . '/billing/create?success=1');
         exit;
     }
 
